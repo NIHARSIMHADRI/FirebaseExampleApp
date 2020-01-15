@@ -27,6 +27,15 @@
         android:hint="Name of event to add"
         />
 
+    <EditText
+        android:id="@+id/eventDescription"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="40dp"
+        android:hint="Event description"
+        />
+
     <CalendarView
         android:id="@+id/eventCalendarDate"
         android:layout_width="wrap_content"
@@ -45,6 +54,7 @@
         android:id="@+id/showAllButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Events"/>
+        android:text="Show Events"
+        android:onClick="onRetrieve"/>
 
 </LinearLayout>

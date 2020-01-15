@@ -14,6 +14,7 @@ public class Event implements Parcelable
 {
     private String eventName;
     private String eventDate;
+    private String eventDescription;
     private int year;
     private int month;
     private int day;
@@ -45,6 +46,7 @@ public class Event implements Parcelable
     public Event(Parcel parcel) {
         eventName = parcel.readString();
         eventDate = parcel.readString();
+        eventDescription = parcel.readString();
         month = parcel.readInt();
         year = parcel.readInt();
         day = parcel.readInt();
@@ -61,9 +63,10 @@ public class Event implements Parcelable
      * @param day
      */
 
-    public Event(String eventName, String eventDate, int year, int month, int day) {
+    public Event(String eventName, String eventDate, String eventDescription, int year, int month, int day) {
         this.eventName = eventName;
         this.eventDate = eventDate;
+        this.eventDescription = eventDescription;
         this.year = year;
         this.month = month;
         this.day = day;
@@ -79,9 +82,10 @@ public class Event implements Parcelable
      * @param day
      * @param key
      */
-    public Event(String eventName, String eventDate, int year, int month, int day, String key) {
+    public Event(String eventName, String eventDate, String eventDescription, int year, int month, int day, String key) {
         this.eventName = eventName;
         this.eventDate = eventDate;
+        this.eventDescription = eventDescription;
         this.year = year;
         this.month = month;
         this.day = day;
@@ -99,6 +103,7 @@ public class Event implements Parcelable
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(eventName);
         dest.writeString(eventDate);
+        dest.writeString(eventDescription);
         dest.writeInt(month);
         dest.writeInt(year);
         dest.writeInt(day);
@@ -145,6 +150,10 @@ public class Event implements Parcelable
 
     public String getEventDate() {
         return eventDate;
+    }
+
+    public String getEventDescription() {
+        return eventDescription;
     }
 
     public int getYear(){

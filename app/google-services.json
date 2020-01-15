@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "223608257444",
+    "firebase_url": "https://eventdatabasesimhadri.firebaseio.com",
+    "project_id": "eventdatabasesimhadri",
+    "storage_bucket": "eventdatabasesimhadri.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223608257444:android:66e63e68ff756cbeee9f31",
+        "android_client_info": {
+          "package_name": "com.example.firebaseexampleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223608257444-kf0q6vm8pkbga98732ga8h7q8rbtapsf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRg5wGlcWcB2rZSx1yye2T0gPkKydOUUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223608257444-kf0q6vm8pkbga98732ga8h7q8rbtapsf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
