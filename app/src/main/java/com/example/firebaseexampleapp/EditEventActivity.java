@@ -26,20 +26,22 @@ public class EditEventActivity extends AppCompatActivity {
 
         String eventNameToUpdate = event.getEventName();
         String eventDateToUpdate = event.getEventDate();
+        String eventDescriptionToUpdate = event.getEventDescription();
         keyToUpdate = event.getKey();
 
         eventNameET = (EditText)findViewById(R.id.eventName);
-        eventDateET = (EditText)findViewById(R.id.eventDate);
-        eventDescriptionET = (EditText)findViewById(R.id.eventDescription);
+        eventDateET = (EditText)findViewById(R.id.eventDescription);
+        eventDescriptionET = (EditText)findViewById(R.id.eventDate);
 
         eventNameET.setText(eventNameToUpdate);
         eventDateET.setText(eventDateToUpdate);
+        eventDescriptionET.setText(eventDescriptionToUpdate);
     }
 
     public void updateEventData(View v) {
         String newName = eventNameET.getText().toString();
         String newDate = eventDateET.getText().toString();
-        String newDescription = eventDateET.getText().toString();
+        String newDescription = eventDescriptionET.getText().toString();
 
         int monthCheck = Integer.parseInt(newDate.substring(0,1));
 
@@ -53,7 +55,7 @@ public class EditEventActivity extends AppCompatActivity {
                 int day = Integer.parseInt(newDate.substring(2, 4));
                 int year = Integer.parseInt(newDate.substring(5));
 
-                dbHelper.updateEvent(keyToUpdate, newDescription, newName, newDate, month, day, year);
+                dbHelper.updateEvent(keyToUpdate, newName, newDescription, newDate, month, day, year);
             }
         }
         else if (newName.length() == 0)
